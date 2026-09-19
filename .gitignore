@@ -1,0 +1,7 @@
+# unused source/backup images
+assets/ahmad_original.png
+assets/IMG_3941.jpg
+
+# OS / editor cruft
+.DS_Store
+*.log
