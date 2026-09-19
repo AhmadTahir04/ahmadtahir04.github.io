@@ -55,6 +55,7 @@
       "Ex-Hydro One Intern",
       "Python TA",
       "Car Enthusiast",
+      "Umbreon Enthusiast",
     ];
     if (!prefersReduced) {
       let idx = 0;
