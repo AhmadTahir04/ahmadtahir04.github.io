@@ -26,25 +26,6 @@
   const toggleBtn = document.getElementById("theme-toggle");
   if (toggleBtn) toggleBtn.addEventListener("click", toggleTheme);
 
-  // Floating theme toggle for mobile (sidebar is hidden there)
-  const floatBtn = toggleBtn ? toggleBtn.cloneNode(true) : null;
-  if (floatBtn) {
-    floatBtn.id = "theme-toggle-float";
-    floatBtn.className = "theme-toggle";
-    Object.assign(floatBtn.style, {
-      position: "fixed",
-      top: "18px",
-      right: "18px",
-      zIndex: "60",
-    });
-    const mq = window.matchMedia("(max-width: 1023px)");
-    const syncFloat = () => { floatBtn.style.display = mq.matches ? "grid" : "none"; };
-    syncFloat();
-    mq.addEventListener("change", syncFloat);
-    floatBtn.addEventListener("click", toggleTheme);
-    document.body.appendChild(floatBtn);
-  }
-
   /* ---------- Rotating subheader (carousel) ---------- */
   const rotators = document.querySelectorAll("[data-rotator]");
   if (rotators.length) {

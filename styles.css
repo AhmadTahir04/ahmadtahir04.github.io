@@ -380,21 +380,6 @@ main#main {
   font-weight: 500;
 }
 
-/* sticky mobile section headers */
-@media (max-width: 1023px) {
-  .section-label {
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    margin-left: -24px;
-    margin-right: -24px;
-    padding: 16px 24px;
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-  }
-}
-
 /* about grid: text + portrait */
 .about-grid { display: grid; gap: 30px; align-items: start; margin-bottom: 8px; }
 @media (min-width: 680px) {
@@ -813,26 +798,26 @@ a.entry-company:hover { color: var(--accent); border-color: var(--accent-line); 
 .reveal.in { opacity: 1; transform: none; }
 
 /* =========================================================
-   Mobile hero
+   Responsive
    ========================================================= */
-@media (max-width: 1023px) {
-  .sidebar { display: none; }
-  .mobile-hero {
-    display: block;
-    padding: 8px 0 64px;
-  }
-  .mobile-hero h1 {
-    font-size: clamp(2.3rem, 10vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin: 0;
-    color: var(--heading);
-  }
-  .mobile-hero h2 { margin: 10px 0 0; font-size: 1.15rem; color: var(--heading); }
-  .mobile-hero p { margin: 16px 0 0; color: var(--text-dim); }
-
-  /* floating theme toggle on mobile */
-  .content { position: relative; }
+@media (max-width: 860px) {
+  .topbar-social { display: none; }
+}
+@media (max-width: 620px) {
+  .topbar-inner { gap: 10px; padding: 0 16px; }
+  .nav-resume { display: none; }
+  .topnav { gap: 0; }
+  .nav-link { padding: 8px 9px; font-size: 0.82rem; }
+  .nav-link::after { left: 9px; right: 9px; }
+  main#main { padding: 0 20px 50px; }
+  .hero { padding: 46px 0 60px; }
+  .hero-cta { width: 100%; }
+  .section { margin-bottom: 72px; }
+}
+@media (max-width: 400px) {
+  .brand { font-size: 0.9rem; }
+  .nav-link { padding: 8px 6px; font-size: 0.76rem; }
+  .name { font-size: clamp(2.1rem, 11vw, 2.8rem); }
 }
 
 /* Reduced motion */
