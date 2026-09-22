@@ -3,15 +3,15 @@
    Theme tokens
    ========================================================= */
 :root {
-  --accent: #ff3b3b;               /* red */
-  --accent-2: #ff7a7a;             /* light red */
-  --accent-soft: rgba(255, 59, 59, 0.13);
-  --accent-line: rgba(255, 59, 59, 0.45);
+  --accent: #3b82f6;               /* red */
+  --accent-2: #60a5fa;             /* light red */
+  --accent-soft: rgba(59, 130, 246, 0.13);
+  --accent-line: rgba(59, 130, 246, 0.45);
 
   --bg: #08080a;                   /* near-black */
   --bg-elev: #141416;
   --surface: rgba(255, 255, 255, 0.03);
-  --surface-hover: rgba(255, 59, 59, 0.06);
+  --surface-hover: rgba(59, 130, 246, 0.06);
   --border: rgba(255, 255, 255, 0.10);
   --border-strong: rgba(255, 255, 255, 0.20);
 
@@ -20,8 +20,8 @@
   --text-dim: #97979f;
   --text-faint: #66666f;
 
-  --tag-bg: rgba(255, 59, 59, 0.11);
-  --tag-text: #ff9a9a;
+  --tag-bg: rgba(59, 130, 246, 0.11);
+  --tag-text: #93c5fd;
 
   --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.7);
   --radius: 14px;
@@ -34,15 +34,15 @@
 }
 
 :root[data-theme="light"] {
-  --accent: #dc2626;
-  --accent-2: #ef4444;
-  --accent-soft: rgba(220, 38, 38, 0.10);
-  --accent-line: rgba(220, 38, 38, 0.42);
+  --accent: #2563eb;
+  --accent-2: #3b82f6;
+  --accent-soft: rgba(37, 99, 235, 0.10);
+  --accent-line: rgba(37, 99, 235, 0.42);
 
   --bg: #ffffff;
   --bg-elev: #ffffff;
   --surface: rgba(0, 0, 0, 0.02);
-  --surface-hover: rgba(220, 38, 38, 0.05);
+  --surface-hover: rgba(37, 99, 235, 0.05);
   --border: rgba(0, 0, 0, 0.10);
   --border-strong: rgba(0, 0, 0, 0.18);
 
@@ -51,8 +51,8 @@
   --text-dim: #55555f;
   --text-faint: #8a8a94;
 
-  --tag-bg: rgba(220, 38, 38, 0.10);
-  --tag-text: #b91c1c;
+  --tag-bg: rgba(37, 99, 235, 0.10);
+  --tag-text: #1d4ed8;
 
   --shadow: 0 24px 50px -32px rgba(0, 0, 0, 0.25);
 }
@@ -86,7 +86,7 @@ body::before {
   inset: 0;
   background:
     radial-gradient(680px 380px at 12% -10%, var(--accent-soft), transparent 70%),
-    radial-gradient(560px 360px at 96% 6%, rgba(255, 59, 59, 0.07), transparent 70%);
+    radial-gradient(560px 360px at 96% 6%, rgba(59, 130, 246, 0.07), transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -134,7 +134,7 @@ a { color: var(--accent); text-decoration: none; }
   transition: opacity 0.3s;
   background: radial-gradient(
     600px circle at var(--x, 50%) var(--y, 50%),
-    rgba(255, 59, 59, 0.08),
+    rgba(59, 130, 246, 0.08),
     transparent 65%
   );
 }
@@ -208,9 +208,9 @@ a { color: var(--accent); text-decoration: none; }
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0.55); }
-  70% { box-shadow: 0 0 0 7px rgba(255, 59, 59, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 59, 59, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.55); }
+  70% { box-shadow: 0 0 0 7px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
 }
 @media (prefers-reduced-motion: reduce) { .avail-dot { animation: none; } }
 
@@ -368,7 +368,7 @@ a { color: var(--accent); text-decoration: none; }
   overflow: hidden;
   isolation: isolate;
   margin-inline: auto;
-  background: linear-gradient(150deg, var(--accent-soft), rgba(255, 122, 122, 0.06));
+  background: linear-gradient(150deg, var(--accent-soft), rgba(96, 165, 250, 0.06));
   border: 1px solid var(--border-strong);
   box-shadow: 0 0 0 6px var(--accent-soft);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), border-color 0.35s var(--ease);
@@ -820,17 +820,17 @@ a.entry-company:hover { color: var(--accent); border-color: var(--accent-line); 
    ========================================================= */
 :root {
   --gh0: rgba(255, 255, 255, 0.06);
-  --gh1: rgba(255, 59, 59, 0.30);
-  --gh2: rgba(255, 59, 59, 0.52);
-  --gh3: rgba(255, 59, 59, 0.75);
-  --gh4: #ff4646;
+  --gh1: rgba(59, 130, 246, 0.30);
+  --gh2: rgba(59, 130, 246, 0.52);
+  --gh3: rgba(59, 130, 246, 0.75);
+  --gh4: #4f8cff;
 }
 :root[data-theme="light"] {
   --gh0: rgba(0, 0, 0, 0.06);
-  --gh1: rgba(220, 38, 38, 0.26);
-  --gh2: rgba(220, 38, 38, 0.48);
-  --gh3: rgba(220, 38, 38, 0.72);
-  --gh4: #dc2626;
+  --gh1: rgba(37, 99, 235, 0.26);
+  --gh2: rgba(37, 99, 235, 0.48);
+  --gh3: rgba(37, 99, 235, 0.72);
+  --gh4: #2563eb;
 }
 
 .gh-card {

@@ -192,7 +192,7 @@
     function step() {
       ctx.clearRect(0, 0, W, H);
       const light = isLight();
-      const lineRGB = light ? "220,38,38" : "255,59,59";
+      const lineRGB = light ? "37,99,235" : "59,130,246";
       const dotRGB = light ? "17,17,19" : "255,255,255";
 
       for (let i = 0; i < particles.length; i++) {
