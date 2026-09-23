@@ -12,7 +12,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308080a'/%3E%3Ctext x='50' y='69' font-family='monospace' font-size='56' font-weight='700' fill='%233b82f6' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
 </head>
@@ -21,170 +21,173 @@
   <div id="spotlight" aria-hidden="true"></div>
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <!-- ===================== TOP BAR ===================== -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">Ahmad<span class="brand-accent">.</span>Tahir</a>
-      <div class="topbar-actions">
-        <a class="topbar-social" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
-        <a class="topbar-social" href="https://linkedin.com/in/ahmadtahir04" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
-        </a>
-        <a class="nav-resume" href="resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
-          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
+  <button id="theme-toggle" class="theme-toggle floating" aria-label="Toggle color theme" title="Toggle theme">
+    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+  </button>
 
-  <main id="main">
+  <main id="main" class="wrap">
     <span id="top"></span>
 
-    <div class="bento">
-
-      <!-- INTRO -->
-      <section class="bento-card intro-card span-2 row-2" aria-label="Introduction">
-        <span class="avail"><span class="avail-dot"></span> Open to 2027 New-Grad SWE roles</span>
-        <h1 class="name">Ahmad Tahir</h1>
-        <h2 class="role">
-          <span class="role-static">Software Engineer</span>
-          <span class="rotator" aria-hidden="true"><span class="rotator-slash">/</span> <span class="rotator-text" data-rotator>Full-Stack Developer</span></span>
-        </h2>
-        <p class="tagline">
-          Computer Science @ Queen's University. I build reliable, useful things,
-          and enjoy breaking them to make them better.
-        </p>
-        <div class="hero-cta">
-          <a class="btn btn-primary" href="mailto:ahmadtahirmalik04@gmail.com">Get in touch</a>
-          <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noreferrer">View résumé</a>
+    <!-- ===================== INDEX / HERO ===================== -->
+    <header class="index">
+      <p class="idx-label mono">00 // Index</p>
+      <div class="index-grid">
+        <div class="index-text">
+          <h1 class="display">AHMAD TAHIR</h1>
+          <p class="build">I build reliable, low-level and full-stack software.</p>
+          <p class="intro">CS student at Queen's University &amp; former Software Engineer Intern at Hydro One.</p>
+          <div class="btn-row">
+            <a class="pill primary" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              GitHub
+            </a>
+            <a class="pill" href="https://linkedin.com/in/ahmadtahir04" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+              LinkedIn
+            </a>
+            <a class="pill" href="resume.pdf" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2.5H7A2.5 2.5 0 0 0 4.5 5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5"/></svg>
+              Résumé
+            </a>
+          </div>
         </div>
-      </section>
-
-      <!-- PHOTO -->
-      <figure class="bento-card photo-card row-2">
-        <div class="photo-inner">
-          <img src="assets/ahmad.jpg?v=4" alt="Ahmad Tahir" loading="lazy"
-               onerror="this.closest('.photo-inner').classList.add('no-img'); this.remove();" />
+        <figure class="index-photo">
+          <img src="assets/ahmad.jpg?v=5" alt="Ahmad Tahir" loading="lazy"
+               onerror="this.closest('.index-photo').classList.add('no-img'); this.remove();" />
           <span class="photo-fallback" aria-hidden="true">AT</span>
+        </figure>
+      </div>
+    </header>
+
+    <hr class="rule" />
+
+    <!-- ===================== ROW: WORK / LIFE ===================== -->
+    <div class="cols">
+      <section class="col-main" aria-label="Experience">
+        <div class="sec-head">
+          <h2 class="sec-title">Experience</h2>
+          <span class="sec-tag mono">01 // Work</span>
         </div>
-      </figure>
-
-      <!-- STATS -->
-      <section class="bento-card stats-card row-2" aria-label="At a glance">
-        <div class="stat"><span class="stat-num" data-count="5400" data-suffix="+">5,400+</span><span class="stat-label">Coursify students</span></div>
-        <div class="stat"><span class="stat-num">15<span class="stat-unit">mo</span></span><span class="stat-label">at Hydro One</span></div>
-        <div class="stat"><span class="stat-num" data-count="200" data-suffix="+">200+</span><span class="stat-label">students taught</span></div>
-        <div class="stat"><span class="stat-num">2027</span><span class="stat-label">graduation</span></div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="bento-card span-2" aria-label="About">
-        <h3 class="card-title"><span class="dot"></span> About</h3>
-        <p class="card-text">
-          I like working close to the metal and close to the user. Recently I spent 15 months at
-          <span class="hl">Hydro One</span> automating SCADA/EMS pipelines and modernizing legacy
-          systems on <span class="hl">Ontario's power grid</span>. On my own time I build things
-          like <span class="hl">Face Cue</span> and <span class="hl">Coursify</span>. I care about
-          correctness, clear docs, and code that holds up in production.
-        </p>
-        <ul class="interests">
-          <li><span class="i-emoji" aria-hidden="true">🏎️</span> Cars</li>
-          <li><span class="i-emoji" aria-hidden="true">🎣</span> Fishing</li>
-          <li><span class="i-emoji" aria-hidden="true">🛠️</span> Side projects</li>
+        <ul class="rows">
+          <li class="row">
+            <div class="row-l"><span class="row-key">Hydro One</span><span class="row-sub">Software Engineering Intern</span></div>
+            <div class="row-r mono">Barrie / Toronto, ON · 2025 – 26</div>
+          </li>
+          <li class="row">
+            <div class="row-l"><span class="row-key">SellStatic</span><span class="row-sub">Product Engineering Intern</span></div>
+            <div class="row-r mono">Toronto, ON · 2024</div>
+          </li>
+          <li class="row">
+            <div class="row-l"><span class="row-key">QMIND</span><span class="row-sub">Computer Vision, Design Team</span></div>
+            <div class="row-r mono">Kingston, ON · 2024 – 25</div>
+          </li>
+          <li class="row">
+            <div class="row-l"><span class="row-key">Queen's University</span><span class="row-sub">Teaching Assistant, Intro to Python</span></div>
+            <div class="row-r mono">Kingston, ON · 2025 – now</div>
+          </li>
         </ul>
       </section>
 
-      <!-- TECH -->
-      <section class="bento-card span-2" aria-label="Tech stack">
-        <h3 class="card-title"><span class="dot"></span> Currently working with</h3>
-        <ul class="tags stack-tags">
-          <li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Python</li>
-          <li>C++</li><li>PostgreSQL</li><li>Supabase</li><li>Redis</li><li>Docker</li>
+      <section class="col-side" aria-label="Interests">
+        <div class="sec-head">
+          <h2 class="sec-title">Interests</h2>
+          <span class="sec-tag mono">02 // Life</span>
+        </div>
+        <ul class="rows list">
+          <li class="row"><span class="row-key">Cars &amp; motorsport</span><span class="row-ic" aria-hidden="true">🏎️</span></li>
+          <li class="row"><span class="row-key">Fishing</span><span class="row-ic" aria-hidden="true">🎣</span></li>
+          <li class="row"><span class="row-key">Side projects</span><span class="row-ic" aria-hidden="true">🛠️</span></li>
+          <li class="row"><span class="row-key">Problem solving</span><span class="row-ic" aria-hidden="true">♟️</span></li>
         </ul>
       </section>
+    </div>
 
-      <!-- COURSIFY -->
-      <article class="bento-card feature span-2" aria-label="Coursify">
-        <div class="feature-head">
+    <hr class="rule" />
+
+    <!-- ===================== ROW: PROJECTS / EDUCATION ===================== -->
+    <div class="cols">
+      <section class="col-main" aria-label="Projects">
+        <div class="sec-head">
+          <h2 class="sec-title">Projects</h2>
+          <span class="sec-tag mono">03 // Projects</span>
+        </div>
+
+        <article class="proj-feature">
           <span class="feature-eyebrow mono">Featured</span>
-          <a class="feature-ext" href="https://www.coursify.ca/" target="_blank" rel="noreferrer" aria-label="Coursify live site">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+          <h3 class="proj-title">Coursify.ca</h3>
+          <p class="proj-desc">A course-planning platform for Queen's — a Chrome extension and web app surfacing GPA trends, offerings, and reviews inside SOLUS. Used by 5,400+ students.</p>
+          <ul class="ticks">
+            <li>Redis-backed API rate limiting with per-user, per-route policies.</li>
+            <li>Supabase Auth with PostgreSQL row-level security.</li>
+            <li>A Gemini agent grounded in course-catalog and review data.</li>
+          </ul>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Redis</li><li>Supabase</li><li>Gemini</li></ul>
+          <div class="btn-row">
+            <a class="pill primary sm" href="https://www.coursify.ca/" target="_blank" rel="noreferrer">Live website</a>
+          </div>
+        </article>
+
+        <div class="proj-grid">
+          <article class="proj-card">
+            <h3 class="proj-title sm">Face Cue</h3>
+            <p class="proj-desc">On-device face-recognition aid for prosopagnosia in C++/OpenCV (YuNet + SFace). Tuned on LFW to <span class="hl">0 false matches across 1,642 stranger tests at 99.5% recall</span>, ~8 ms/frame, served behind a React UI.</p>
+            <ul class="tags"><li>C++</li><li>OpenCV</li><li>React</li><li>SQLite</li></ul>
+          </article>
+
+          <article class="proj-card">
+            <h3 class="proj-title sm">Vision Allies</h3>
+            <p class="proj-desc">A Jira-style internal support hub in React + TypeScript, with Redux Toolkit state and protected routing over a User–Ticket–Comment model.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Redux Toolkit</li></ul>
+          </article>
+
+          <a class="proj-card link" href="https://github.com/AhmadTahir04?tab=repositories" target="_blank" rel="noreferrer">
+            <div class="proj-card-top">
+              <h3 class="proj-title sm">More on GitHub</h3>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </div>
+            <p class="proj-desc">Side projects, experiments &amp; source — LensSense, Flight Deals Finder, and more.</p>
           </a>
         </div>
-        <h3 class="feature-title"><a href="https://www.coursify.ca/" target="_blank" rel="noreferrer">Coursify</a></h3>
-        <p class="feature-desc">
-          A course-planning platform for Queen's — a Chrome extension and web app surfacing GPA
-          trends, offerings, and reviews inside SOLUS. Redis-backed API rate limiting, Supabase
-          Auth with PostgreSQL RLS, and a Gemini agent grounded in catalog data. 5,400+ students.
-        </p>
-        <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Redis</li><li>Supabase</li><li>Gemini</li></ul>
-      </article>
-
-      <!-- FACE CUE -->
-      <article class="bento-card feature span-2" aria-label="Face Cue">
-        <div class="feature-head">
-          <span class="feature-eyebrow mono">Featured</span>
-        </div>
-        <h3 class="feature-title">Face Cue</h3>
-        <p class="feature-desc">
-          A real-time, on-device face-recognition aid for prosopagnosia in C++/OpenCV (YuNet +
-          SFace 128-D embeddings), matching enrolled faces at ~8 ms/frame with no cloud or stored
-          video. A conservative decision layer tuned on LFW hit <span class="hl">0 false matches
-          across 1,642 stranger tests at 99.5% recall</span>. Served from a C++ MJPEG server behind
-          a React + TypeScript UI, with 15 unit tests.
-        </p>
-        <ul class="tags"><li>C++</li><li>OpenCV</li><li>React</li><li>TypeScript</li><li>SQLite</li></ul>
-      </article>
-
-      <!-- EXPERIENCE -->
-      <section class="bento-card span-2 row-2" aria-label="Experience">
-        <h3 class="card-title"><span class="dot"></span> Experience</h3>
-        <ol class="xp">
-          <li>
-            <div class="xp-top"><span class="xp-role">SWE Intern · <a href="https://www.hydroone.com/" target="_blank" rel="noreferrer">Hydro One</a></span><span class="xp-when mono">2025–26</span></div>
-            <p class="xp-note">Automated SCADA/EMS release workflows (25→3 min) and migrated a FORTRAN model to C++.</p>
-          </li>
-          <li>
-            <div class="xp-top"><span class="xp-role">Product Eng Intern · SellStatic</span><span class="xp-when mono">2024</span></div>
-            <p class="xp-note">Full-stack MERN apps with caching and end-to-end Selenium coverage.</p>
-          </li>
-          <li>
-            <div class="xp-top"><span class="xp-role">Teaching Assistant · <a href="https://www.queensu.ca/" target="_blank" rel="noreferrer">Queen's</a></span><span class="xp-when mono">2025–now</span></div>
-            <p class="xp-note">Lead tutorials for 200+ first-years in Intro to Python.</p>
-          </li>
-        </ol>
       </section>
 
-      <!-- VISION ALLIES -->
-      <article class="bento-card span-2" aria-label="Vision Allies">
-        <h3 class="feature-title small">Vision Allies — Support Hub</h3>
-        <p class="feature-desc">
-          A Jira-style internal support hub in React + TypeScript centralizing issue tracking and
-          resolution, with Redux Toolkit state and protected routing over a User–Ticket–Comment model.
-        </p>
-        <ul class="tags"><li>React</li><li>TypeScript</li><li>Redux Toolkit</li><li>React Router</li></ul>
-      </article>
+      <section class="col-side" aria-label="Education and highlights">
+        <div class="sec-head">
+          <h2 class="sec-title">Education</h2>
+          <span class="sec-tag mono">04 // School</span>
+        </div>
+        <ul class="rows list">
+          <li class="row block">
+            <span class="row-key">Queen's University</span>
+            <span class="row-sub">BCompSc (Honours) — Software Design</span>
+            <span class="row-meta mono">2022 – 2027 · Kingston, ON</span>
+          </li>
+        </ul>
 
-      <!-- OTHER PROJECTS -->
-      <section class="bento-card span-2" aria-label="Other projects">
-        <h3 class="card-title"><span class="dot"></span> Other work</h3>
-        <ul class="repos">
-          <li><a href="https://github.com/AhmadTahir04/LensSense" target="_blank" rel="noreferrer"><span class="repo-name">LensSense</span><span class="repo-desc">SVM on live camera input.</span><span class="arr">↗</span></a></li>
-          <li><a href="https://github.com/AhmadTahir04/Flight-Deals-Finder" target="_blank" rel="noreferrer"><span class="repo-name">Flight Deals Finder</span><span class="repo-desc">Multi-API price alerts.</span><span class="arr">↗</span></a></li>
-          <li><a href="https://github.com/AhmadTahir04/Stock-Trading-News-Alert" target="_blank" rel="noreferrer"><span class="repo-name">Stock News Alert</span><span class="repo-desc">Price-move SMS via Twilio.</span><span class="arr">↗</span></a></li>
-          <li><a href="https://github.com/AhmadTahir04?tab=repositories" target="_blank" rel="noreferrer"><span class="repo-name">More on GitHub</span><span class="repo-desc">Full repo list.</span><span class="arr">↗</span></a></li>
+        <div class="sec-head spaced">
+          <h2 class="sec-title">Highlights</h2>
+          <span class="sec-tag mono">/ Stats</span>
+        </div>
+        <ul class="rows list">
+          <li class="row"><span class="row-key">5,400+ Coursify students</span></li>
+          <li class="row"><span class="row-key">25 → 3 min release pipeline</span></li>
+          <li class="row"><span class="row-key">200+ students taught</span></li>
         </ul>
       </section>
+    </div>
 
-      <!-- GITHUB ACTIVITY -->
-      <section class="bento-card span-4" aria-label="GitHub Activity">
-        <div class="gh-head">
-          <h3 class="card-title"><span class="dot"></span> GitHub activity</h3>
-          <span class="gh-total mono" id="gh-total"></span>
+    <hr class="rule" />
+
+    <!-- ===================== GITHUB ===================== -->
+    <section class="full" aria-label="GitHub activity">
+      <div class="sec-head">
+        <h2 class="sec-title">GitHub</h2>
+        <span class="sec-tag mono">05 // Activity</span>
+      </div>
+      <div class="gh">
+        <div class="gh-topline">
+          <span class="gh-total mono" id="gh-total">Contributions</span>
+          <a class="mini-link mono" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer">@AhmadTahir04 ↗</a>
         </div>
         <div class="gh-scroll">
           <div class="gh-months mono" id="gh-months" aria-hidden="true"></div>
@@ -197,22 +200,23 @@
           <span class="gh-cell l0"></span><span class="gh-cell l1"></span><span class="gh-cell l2"></span><span class="gh-cell l3"></span><span class="gh-cell l4"></span>
           <span>More</span>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- CONTACT -->
-      <section class="bento-card contact-card span-4" aria-label="Contact">
-        <div class="contact-inner">
-          <div>
-            <h3 class="contact-title">Let's build something.</h3>
-            <p class="contact-note">Looking for 2027 new-grad SWE roles. If you're hiring, or just want to talk shop, my inbox is open.</p>
-          </div>
-          <a class="btn btn-primary" href="mailto:ahmadtahirmalik04@gmail.com">Say hello</a>
-        </div>
-      </section>
+    <hr class="rule" />
 
-    </div>
-
-    <p class="colophon mono">Designed &amp; built by Ahmad Tahir · © 2026</p>
+    <!-- ===================== CONTACT ===================== -->
+    <footer class="full contact" aria-label="Contact">
+      <div class="sec-head">
+        <h2 class="sec-title">Contact</h2>
+        <span class="sec-tag mono">06 // Say hi</span>
+      </div>
+      <div class="contact-row">
+        <a class="big-mail" href="mailto:ahmadtahirmalik04@gmail.com">ahmadtahirmalik04@gmail.com ↗</a>
+        <p class="contact-note">Open to 2027 new-grad software engineering roles.</p>
+      </div>
+      <p class="colophon mono">Designed &amp; built by Ahmad Tahir · © 2026</p>
+    </footer>
   </main>
 
   <script src="script.js"></script>
