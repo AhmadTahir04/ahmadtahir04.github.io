@@ -4,218 +4,405 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ahmad Tahir · Software Engineer</title>
-  <meta name="description" content="Ahmad Tahir, Computer Science student at Queen's University and software engineer building reliable, useful things." />
+  <meta name="description" content="Ahmad Tahir, Computer Science student at Queen's University and software engineer building reliable, useful things. Portfolio, experience, and projects." />
   <meta name="author" content="Ahmad Tahir" />
+
+  <!-- Open Graph / social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Ahmad Tahir · Software Engineer" />
   <meta property="og:description" content="Computer Science @ Queen's University. I build reliable, useful software." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2308080a'/%3E%3Ctext x='50' y='69' font-family='monospace' font-size='56' font-weight='700' fill='%233b82f6' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
+  <!-- Interactive particle background -->
   <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- Scroll progress -->
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- Cursor spotlight glow -->
   <div id="spotlight" aria-hidden="true"></div>
+
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <button id="theme-toggle" class="theme-toggle floating" aria-label="Toggle color theme" title="Toggle theme">
-    <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-    <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
-  </button>
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Ahmad<span class="brand-accent">.</span>Tahir</a>
 
-  <main id="main" class="wrap">
+      <nav class="topnav" aria-label="In-page navigation">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#activity" class="nav-link" data-section="activity">Activity</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <a class="topbar-social" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+        </a>
+        <a class="topbar-social" href="https://linkedin.com/in/ahmadtahir04" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+        </a>
+        <a class="nav-resume" href="resume.pdf" target="_blank" rel="noreferrer">Résumé</a>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
     <span id="top"></span>
 
-    <!-- ===================== INDEX / HERO ===================== -->
-    <header class="index">
-      <p class="idx-label mono">00 // Index</p>
-      <div class="index-grid">
-        <div class="index-text">
-          <h1 class="display">AHMAD TAHIR</h1>
-          <p class="build">I build reliable, low-level and full-stack software.</p>
-          <p class="intro">CS student at Queen's University &amp; former Software Engineer Intern at Hydro One.</p>
-          <div class="btn-row">
-            <a class="pill primary" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
-              GitHub
-            </a>
-            <a class="pill" href="https://linkedin.com/in/ahmadtahir04" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
-              LinkedIn
-            </a>
-            <a class="pill" href="resume.pdf" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 2.5H7A2.5 2.5 0 0 0 4.5 5v14A2.5 2.5 0 0 0 7 21.5h10a2.5 2.5 0 0 0 2.5-2.5V8z"/><path d="M14 2.5V8h5.5"/></svg>
-              Résumé
-            </a>
-          </div>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" aria-label="Intro">
+      <span class="avail"><span class="avail-dot"></span> Open to 2027 New-Grad SWE roles</span>
+
+      <figure class="hero-photo">
+        <div class="portrait-frame">
+          <img src="assets/ahmad.jpg?v=6" alt="Ahmad Tahir" loading="lazy"
+               onerror="this.closest('.portrait-frame').classList.add('no-img'); this.remove();" />
+          <span class="portrait-monogram" aria-hidden="true">AT</span>
         </div>
-        <figure class="index-photo">
-          <img src="assets/ahmad.jpg?v=5" alt="Ahmad Tahir" loading="lazy"
-               onerror="this.closest('.index-photo').classList.add('no-img'); this.remove();" />
-          <span class="photo-fallback" aria-hidden="true">AT</span>
-        </figure>
+      </figure>
+
+      <h1 class="name">Ahmad Tahir</h1>
+      <h2 class="role">
+        <span class="role-static">Software Engineer</span>
+        <span class="rotator" aria-hidden="true"><span class="rotator-slash">/</span> <span class="rotator-text" data-rotator>Full-Stack Developer</span></span>
+      </h2>
+      <p class="tagline">
+        Computer Science @ Queen's University. I build reliable, useful things,
+        and enjoy breaking them to make them better.
+      </p>
+
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="mailto:ahmadtahirmalik04@gmail.com">Get in touch</a>
+        <a class="btn btn-ghost" href="resume.pdf" target="_blank" rel="noreferrer">View résumé</a>
       </div>
-    </header>
 
-    <hr class="rule" />
+      <ul class="hero-socials" aria-label="Social links">
+        <li>
+          <a href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/ahmadtahir04" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3.1-1.9-3.1s-2.1 1.5-2.1 3v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:ahmadtahirmalik04@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
 
-    <!-- ===================== ROW: WORK / LIFE ===================== -->
-    <div class="cols">
-      <section class="col-main" aria-label="Experience">
-        <div class="sec-head">
-          <h2 class="sec-title">Experience</h2>
-          <span class="sec-tag mono">01 // Work</span>
-        </div>
-        <ul class="rows">
-          <li class="row">
-            <div class="row-l"><span class="row-key">Hydro One</span><span class="row-sub">Software Engineering Intern</span></div>
-            <div class="row-r mono">Barrie / Toronto, ON · 2025 – 26</div>
-          </li>
-          <li class="row">
-            <div class="row-l"><span class="row-key">SellStatic</span><span class="row-sub">Product Engineering Intern</span></div>
-            <div class="row-r mono">Toronto, ON · 2024</div>
-          </li>
-          <li class="row">
-            <div class="row-l"><span class="row-key">QMIND</span><span class="row-sub">Computer Vision, Design Team</span></div>
-            <div class="row-r mono">Kingston, ON · 2024 – 25</div>
-          </li>
-          <li class="row">
-            <div class="row-l"><span class="row-key">Queen's University</span><span class="row-sub">Teaching Assistant, Intro to Python</span></div>
-            <div class="row-r mono">Kingston, ON · 2025 – now</div>
-          </li>
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-label="About">
+      <h3 class="section-label"><span class="mono-num">01.</span> About</h3>
+
+      <div class="prose reveal">
+        <p>
+          I'm a Computer Science student at <a href="https://www.queensu.ca/" target="_blank" rel="noreferrer">Queen's University</a>
+          (Software Design specialization), graduating in 2027. Most of what I do comes
+          down to building tools people actually reach for.
+        </p>
+        <p>
+          Recently I spent 15 months at <span class="hl">Hydro One</span>, where working
+          directly on <span class="hl">Ontario's power grid</span> was honestly one of the
+          coolest parts. On the side I help build
+          <a href="https://www.coursify.ca/" target="_blank" rel="noreferrer">Coursify</a>,
+          a course-planning platform now used by <span class="hl">5,400+</span> Queen's
+          students. I care about the details: clean code, clear docs, and shipping things
+          that hold up in production.
+        </p>
+      </div>
+
+      <div class="reveal">
+        <p class="stack-label">Currently working with:</p>
+        <ul class="stack-list">
+          <li>TypeScript</li>
+          <li>React / Next.js</li>
+          <li>Node.js</li>
+          <li>Python</li>
+          <li>C++</li>
+          <li>PostgreSQL / Supabase</li>
+          <li>Redis</li>
+          <li>Docker</li>
         </ul>
-      </section>
+      </div>
 
-      <section class="col-side" aria-label="Interests">
-        <div class="sec-head">
-          <h2 class="sec-title">Interests</h2>
-          <span class="sec-tag mono">02 // Life</span>
-        </div>
-        <ul class="rows list">
-          <li class="row"><span class="row-key">Cars &amp; motorsport</span><span class="row-ic" aria-hidden="true">🏎️</span></li>
-          <li class="row"><span class="row-key">Fishing</span><span class="row-ic" aria-hidden="true">🎣</span></li>
-          <li class="row"><span class="row-key">Side projects</span><span class="row-ic" aria-hidden="true">🛠️</span></li>
-          <li class="row"><span class="row-key">Problem solving</span><span class="row-ic" aria-hidden="true">♟️</span></li>
+      <!-- Beyond the code -->
+      <div class="beyond reveal">
+        <h4 class="beyond-label mono">Beyond the code</h4>
+        <p class="beyond-text">
+          When I step away from the keyboard, you'll usually find me around
+          <span class="hl">cars</span>, out on the water <span class="hl">fishing</span>,
+          or tinkering with whatever side project has my attention that week. Curious by default.
+        </p>
+        <ul class="interests" aria-label="Interests">
+          <li><span class="i-emoji" aria-hidden="true">🏎️</span> Cars &amp; motorsport</li>
+          <li><span class="i-emoji" aria-hidden="true">🎣</span> Fishing</li>
+          <li><span class="i-emoji" aria-hidden="true">🛠️</span> Side projects</li>
+          <li><span class="i-emoji" aria-hidden="true">♟️</span> Problem solving</li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
 
-    <hr class="rule" />
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section" aria-label="Experience">
+      <h3 class="section-label"><span class="mono-num">02.</span> Experience</h3>
+      <ol class="timeline">
 
-    <!-- ===================== ROW: PROJECTS / EDUCATION ===================== -->
-    <div class="cols">
-      <section class="col-main" aria-label="Projects">
-        <div class="sec-head">
-          <h2 class="sec-title">Projects</h2>
-          <span class="sec-tag mono">03 // Projects</span>
-        </div>
-
-        <article class="proj-feature">
-          <span class="feature-eyebrow mono">Featured</span>
-          <h3 class="proj-title">Coursify.ca</h3>
-          <p class="proj-desc">A course-planning platform for Queen's — a Chrome extension and web app surfacing GPA trends, offerings, and reviews inside SOLUS. Used by 5,400+ students.</p>
-          <ul class="ticks">
-            <li>Redis-backed API rate limiting with per-user, per-route policies.</li>
-            <li>Supabase Auth with PostgreSQL row-level security.</li>
-            <li>A Gemini agent grounded in course-catalog and review data.</li>
-          </ul>
-          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>Redis</li><li>Supabase</li><li>Gemini</li></ul>
-          <div class="btn-row">
-            <a class="pill primary sm" href="https://www.coursify.ca/" target="_blank" rel="noreferrer">Live website</a>
+        <li class="entry reveal">
+          <div class="entry-date">May 2025 – Aug 2026</div>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              Software Engineering Intern <span class="at">·</span>
+              <a href="https://www.hydroone.com/" target="_blank" rel="noreferrer" class="entry-company">Hydro One</a>
+            </h4>
+            <p class="entry-meta">Barrie / Toronto, ON</p>
+            <ul class="entry-points">
+              <li>Automated SCADA/EMS database release workflows with Perl + GitLab CI, cutting execution time from <strong>25 to 3 minutes</strong> and standardizing a release process now in production for 1+ year.</li>
+              <li>Built 25+ automated validation scripts for SCADA/EMS models, improving data quality and saving 10–15 minutes per ticketed task.</li>
+              <li>Wrote a Python package that converts EMS modeling requests into GE Source-ready import files, applying voltage-based rules and eliminating manual data prep.</li>
+              <li>Migrated a legacy FORTRAN dynamic line-rating codebase to C++, improving maintainability and removing single-expert dependency.</li>
+            </ul>
+            <ul class="tags">
+              <li>Perl</li><li>Python</li><li>C++</li><li>GitLab CI</li><li>Power BI</li><li>SCADA / EMS</li>
+            </ul>
           </div>
+        </li>
+
+        <li class="entry reveal">
+          <div class="entry-date">May 2024 – Aug 2024</div>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              Product Engineering Intern <span class="at">·</span>
+              <span class="entry-company">SellStatic</span>
+            </h4>
+            <p class="entry-meta">Toronto, ON</p>
+            <ul class="entry-points">
+              <li>Built full-stack web apps on the MERN stack, adding application-level caching for frequently requested data to cut redundant requests and speed up retrieval.</li>
+              <li>Wrote end-to-end Selenium suites covering the majority of critical workflows, improving regression reliability across key user flows.</li>
+              <li>Translated Figma and Webflow prototypes into responsive, reusable interfaces, collaborating with designers to improve usability on desktop and mobile.</li>
+            </ul>
+            <ul class="tags">
+              <li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Selenium</li><li>Figma</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="entry reveal">
+          <div class="entry-date">Jan 2025 – Present</div>
+          <div class="entry-body">
+            <h4 class="entry-title">
+              Teaching Assistant <span class="at">·</span>
+              <a href="https://www.queensu.ca/" target="_blank" rel="noreferrer" class="entry-company">Queen's University</a>
+            </h4>
+            <p class="entry-meta">Intro to Python Programming · Kingston, ON</p>
+            <ul class="entry-points">
+              <li>Lead tutorials for 200+ first-year students, improving Python comprehension and assignment completion rates.</li>
+              <li>Streamlined grading to cut turnaround time by 30% while boosting engagement through hands-on exercises.</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>Teaching</li><li>Mentorship</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <a class="inline-link resume-link" href="resume.pdf" target="_blank" rel="noreferrer">
+        View full résumé
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-label="Projects">
+      <h3 class="section-label"><span class="mono-num">03.</span> Projects</h3>
+
+      <!-- Featured -->
+      <div class="featured">
+        <article class="feature-card reveal">
+          <div class="feature-head">
+            <span class="feature-eyebrow mono">Featured Project</span>
+            <div class="feature-links">
+              <a href="https://www.coursify.ca/" target="_blank" rel="noreferrer" aria-label="Coursify live site">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h4 class="feature-title"><a href="https://www.coursify.ca/" target="_blank" rel="noreferrer">Coursify</a></h4>
+          <p class="feature-desc">
+            A course-planning platform for Queen's students: a Chrome MV3 extension and web
+            app that surface GPA trends, offerings, Reddit threads, and professor reviews
+            right inside SOLUS. <strong>1,100+ launch-day users</strong>, now
+            <strong>5,400+ students</strong>. I built Redis-backed API rate limiting,
+            Supabase Auth + PostgreSQL row-level security, and a Gemini agent grounded in
+            course-catalog data.
+          </p>
+          <ul class="tags">
+            <li>Next.js</li><li>TypeScript</li><li>Redis</li><li>Supabase</li><li>PostgreSQL</li><li>Gemini</li><li>Chrome MV3</li>
+          </ul>
         </article>
 
-        <div class="proj-grid">
-          <article class="proj-card">
-            <h3 class="proj-title sm">Face Cue</h3>
-            <p class="proj-desc">On-device face-recognition aid for prosopagnosia in C++/OpenCV (YuNet + SFace). Tuned on LFW to <span class="hl">0 false matches across 1,642 stranger tests at 99.5% recall</span>, ~8 ms/frame, served behind a React UI.</p>
-            <ul class="tags"><li>C++</li><li>OpenCV</li><li>React</li><li>SQLite</li></ul>
-          </article>
+        <article class="feature-card reveal">
+          <div class="feature-head">
+            <span class="feature-eyebrow mono">Featured Project</span>
+          </div>
+          <h4 class="feature-title">Face Cue</h4>
+          <p class="feature-desc">
+            A real-time, on-device face-recognition aid for prosopagnosia, built in C++/OpenCV
+            (YuNet detection + SFace 128-D embeddings) matching enrolled faces at ~8 ms/frame on
+            CPU with no cloud, network calls, or stored video. A conservative decision layer
+            (cosine threshold, top-2 margin, multi-frame agreement) tuned on the LFW benchmark
+            reached <strong>0 false matches across 1,642 stranger tests at 99.5% recall</strong>.
+            Served from a localhost-only C++ HTTP/MJPEG server behind a React + TypeScript UI, with 15 unit tests.
+          </p>
+          <ul class="tags">
+            <li>C++</li><li>OpenCV</li><li>React</li><li>TypeScript</li><li>SQLite</li>
+          </ul>
+        </article>
 
-          <article class="proj-card">
-            <h3 class="proj-title sm">Vision Allies</h3>
-            <p class="proj-desc">A Jira-style internal support hub in React + TypeScript, with Redux Toolkit state and protected routing over a User–Ticket–Comment model.</p>
-            <ul class="tags"><li>React</li><li>TypeScript</li><li>Redux Toolkit</li></ul>
-          </article>
-
-          <a class="proj-card link" href="https://github.com/AhmadTahir04?tab=repositories" target="_blank" rel="noreferrer">
-            <div class="proj-card-top">
-              <h3 class="proj-title sm">More on GitHub</h3>
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
-            </div>
-            <p class="proj-desc">Side projects, experiments &amp; source — LensSense, Flight Deals Finder, and more.</p>
-          </a>
-        </div>
-      </section>
-
-      <section class="col-side" aria-label="Education and highlights">
-        <div class="sec-head">
-          <h2 class="sec-title">Education</h2>
-          <span class="sec-tag mono">04 // School</span>
-        </div>
-        <ul class="rows list">
-          <li class="row block">
-            <span class="row-key">Queen's University</span>
-            <span class="row-sub">BCompSc (Honours) — Software Design</span>
-            <span class="row-meta mono">2022 – 2027 · Kingston, ON</span>
-          </li>
-        </ul>
-
-        <div class="sec-head spaced">
-          <h2 class="sec-title">Highlights</h2>
-          <span class="sec-tag mono">/ Stats</span>
-        </div>
-        <ul class="rows list">
-          <li class="row"><span class="row-key">5,400+ Coursify students</span></li>
-          <li class="row"><span class="row-key">25 → 3 min release pipeline</span></li>
-          <li class="row"><span class="row-key">200+ students taught</span></li>
-        </ul>
-      </section>
-    </div>
-
-    <hr class="rule" />
-
-    <!-- ===================== GITHUB ===================== -->
-    <section class="full" aria-label="GitHub activity">
-      <div class="sec-head">
-        <h2 class="sec-title">GitHub</h2>
-        <span class="sec-tag mono">05 // Activity</span>
+        <article class="feature-card reveal">
+          <div class="feature-head">
+            <span class="feature-eyebrow mono">Featured Project</span>
+          </div>
+          <h4 class="feature-title">Vision Allies · Support Hub</h4>
+          <p class="feature-desc">
+            A Jira-style internal support hub built in React + TypeScript that centralizes
+            issue tracking, developer follow-ups, and ticket resolution. I architected
+            client-side state and protected navigation with Redux Toolkit and React Router,
+            and modeled User–Ticket–Comment relationships to power contextual ticket
+            histories and discussion workflows.
+          </p>
+          <ul class="tags">
+            <li>React</li><li>TypeScript</li><li>Redux Toolkit</li><li>React Router</li><li>Material UI</li>
+          </ul>
+        </article>
       </div>
-      <div class="gh">
-        <div class="gh-topline">
-          <span class="gh-total mono" id="gh-total">Contributions</span>
-          <a class="mini-link mono" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer">@AhmadTahir04 ↗</a>
+
+      <!-- Grid from GitHub -->
+      <h4 class="grid-label mono">From GitHub</h4>
+      <div class="project-grid">
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/LensSense" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">LensSense</h5>
+          <p class="proj-desc">A computer-vision app that trains an SVM on live camera input to detect and react to specific hand actions in real time.</p>
+          <ul class="tags small"><li>Python</li><li>OpenCV</li><li>scikit-learn</li></ul>
+        </a>
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/Flight-Deals-Finder" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">Flight Deals Finder</h5>
+          <p class="proj-desc">Monitors flight prices across multiple APIs, resolves IATA codes, hunts for the lowest fares, and fires alerts the moment prices drop.</p>
+          <ul class="tags small"><li>Python</li><li>REST APIs</li><li>Automation</li></ul>
+        </a>
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/Stock-Trading-News-Alert" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">Stock Trading News Alert</h5>
+          <p class="proj-desc">Tracks significant stock swings with Alpha Vantage, pulls related headlines from News API, and texts you the story behind the move via Twilio.</p>
+          <ul class="tags small"><li>Python</li><li>Alpha Vantage</li><li>Twilio</li></ul>
+        </a>
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/Graph-Shortest-Path-Finder-Using-Dijkstra-s-Algorithm" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">Dijkstra Path Finder</h5>
+          <p class="proj-desc">A clean implementation of Dijkstra's shortest-path algorithm over weighted graphs, a study in core data structures and pathfinding.</p>
+          <ul class="tags small"><li>Python</li><li>Algorithms</li><li>Graphs</li></ul>
+        </a>
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/ISS-Tracker" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">ISS Tracker</h5>
+          <p class="proj-desc">Combines live position data and sunrise/sunset checks to email you the moment the International Space Station passes overhead at night.</p>
+          <ul class="tags small"><li>Python</li><li>REST APIs</li><li>SMTP</li></ul>
+        </a>
+
+        <a class="proj reveal" href="https://github.com/AhmadTahir04/Pssword-Manager" target="_blank" rel="noreferrer">
+          <div class="proj-top">
+            <svg class="folder" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            <svg class="ext" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </div>
+          <h5 class="proj-title">Password Manager</h5>
+          <p class="proj-desc">A desktop vault with a Tkinter UI that generates strong passwords and stores them locally in JSON, a hands-on take on secure credential storage.</p>
+          <ul class="tags small"><li>Python</li><li>Tkinter</li><li>JSON</li></ul>
+        </a>
+      </div>
+
+      <a class="inline-link" href="https://github.com/AhmadTahir04?tab=repositories" target="_blank" rel="noreferrer">
+        See more on GitHub
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </section>
+
+    <!-- GITHUB ACTIVITY -->
+    <section id="activity" class="section" aria-label="GitHub Activity">
+      <h3 class="section-label"><span class="mono-num">04.</span> GitHub Activity</h3>
+      <div class="gh-card reveal">
+        <div class="gh-head">
+          <a class="gh-view" href="https://github.com/AhmadTahir04" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            View on GitHub
+          </a>
+          <span class="gh-total mono" id="gh-total"></span>
         </div>
         <div class="gh-scroll">
           <div class="gh-months mono" id="gh-months" aria-hidden="true"></div>
           <div class="gh-grid" id="gh-grid" role="img" aria-label="GitHub contributions over the last year">
-            <div class="gh-state mono" id="gh-state">Loading…</div>
+            <div class="gh-state mono" id="gh-state">Loading contributions…</div>
           </div>
         </div>
         <div class="gh-legend mono">
           <span>Less</span>
-          <span class="gh-cell l0"></span><span class="gh-cell l1"></span><span class="gh-cell l2"></span><span class="gh-cell l3"></span><span class="gh-cell l4"></span>
+          <span class="gh-cell l0"></span>
+          <span class="gh-cell l1"></span>
+          <span class="gh-cell l2"></span>
+          <span class="gh-cell l3"></span>
+          <span class="gh-cell l4"></span>
           <span>More</span>
         </div>
       </div>
     </section>
 
-    <hr class="rule" />
-
-    <!-- ===================== CONTACT ===================== -->
-    <footer class="full contact" aria-label="Contact">
-      <div class="sec-head">
-        <h2 class="sec-title">Contact</h2>
-        <span class="sec-tag mono">06 // Say hi</span>
-      </div>
-      <div class="contact-row">
-        <a class="big-mail" href="mailto:ahmadtahirmalik04@gmail.com">ahmadtahirmalik04@gmail.com ↗</a>
-        <p class="contact-note">Open to 2027 new-grad software engineering roles.</p>
-      </div>
-      <p class="colophon mono">Designed &amp; built by Ahmad Tahir · © 2026</p>
+    <!-- CONTACT / FOOTER -->
+    <footer class="footer">
+      <p class="footer-cta">
+        I'm currently looking for <strong>2027 new-grad software engineering</strong> roles.
+        If you're hiring, or just want to talk shop, my inbox is open.
+      </p>
+      <a class="btn btn-primary" href="mailto:ahmadtahirmalik04@gmail.com">Say hello</a>
+      <p class="colophon mono">
+        Designed &amp; built by Ahmad Tahir · Coded in a code editor, deployed to the web.
+      </p>
     </footer>
   </main>
 
