@@ -951,3 +951,41 @@ a.entry-company:hover { color: var(--accent); border-color: var(--accent-line); 
 .gh-cell.l4 { background: var(--gh4); }
 .gh-legend span:first-child { margin-right: 3px; }
 .gh-legend span:last-child { margin-left: 3px; }
+
+/* =========================================================
+   Split hero (text left, photo right)
+   ========================================================= */
+.hero.split {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  padding: 54px 0 74px;
+}
+.hero-left { display: flex; flex-direction: column; align-items: flex-start; }
+.greeting { margin: 4px 0 0; font-size: clamp(1.1rem, 2.2vw, 1.5rem); font-weight: 500; color: var(--text-dim); }
+.hero.split .name { text-align: left; color: var(--accent); margin: 6px 0 0; font-size: clamp(2.6rem, 6vw, 4.2rem); }
+.hero.split .role { text-align: left; }
+.hero.split .tagline { text-align: left; margin: 18px 0 0; max-width: 42ch; }
+.hero.split .hero-cta { justify-content: flex-start; }
+.hero.split .hero-socials { justify-content: flex-start; }
+
+.hero-right { position: relative; display: grid; place-items: center; }
+.hero-right::before {
+  content: "";
+  position: absolute;
+  width: 80%; aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 66%);
+  z-index: 0;
+  pointer-events: none;
+}
+.hero.split .hero-photo { margin: 0; position: relative; z-index: 1; width: 100%; display: grid; place-items: center; }
+.hero.split .hero-photo .portrait-frame { max-width: 292px; }
+
+@media (max-width: 820px) {
+  .hero.split { grid-template-columns: 1fr; gap: 26px; padding: 40px 0 56px; }
+  .hero-right { order: -1; }
+  .hero.split .hero-photo .portrait-frame { max-width: 190px; }
+}
